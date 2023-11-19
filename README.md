@@ -20,7 +20,7 @@ This is a chatbot designed to make an inexperienced door-to-door salesman to an 
 4. Install dependencies with
     >  `pdm install`
 5. Run the SalesmanBot with
-    > `pdm run chatbot.py `
+    > `pdm run chatbot/chatbot.py `
 
 ## Instructions
 1. Insert your field of work
