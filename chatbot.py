@@ -12,10 +12,11 @@ logging.basicConfig(level=logging.INFO)
 llm = ChatOpenAI(max_tokens=150, temperature=0.9)
 
 # Prompt
+field_of_work = input("Please enter your field of work: ")
 prompt = ChatPromptTemplate(
     messages=[
         SystemMessagePromptTemplate.from_template(
-            "You are a door-to-door salesperson expert. You are teaching a new recruit how to sell."
+            f"You are a door-to-door salesperson expert in {field_of_work}. You are teaching a new recruit how to sell."
         ),
         # The `variable_name` here is what must align with memory
         MessagesPlaceholder(variable_name="chat_history"),
@@ -23,13 +24,12 @@ prompt = ChatPromptTemplate(
     ]
 )
 
-
 # Notice that we `return_messages=True` to fit into the MessagesPlaceholder
 # Notice that `"chat_history"` aligns with the MessagesPlaceholder name
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 conversation = LLMChain(llm=llm, prompt=prompt, verbose=False, memory=memory)
 
-print("Welcome to the door-to-door salesperson expert chatbot!")
+print(f"Welcome to the door-to-door {field_of_work} salesperson expert chatbot!")
 print("Type 'history' to see the conversation history.")
 print("Press ctrl-c or ctrl-d on the keyboard to exit.")
 print("")
@@ -44,11 +44,10 @@ while True:
 
         print("Processing...")
 
-        # Simulate model response time
-        # time.sleep(2)
         bot_response = conversation({"question": user_input})
         print(bot_response["text"])
 
     # Press ctrl-c or ctrl-d on the keyboard to exit
     except (KeyboardInterrupt, EOFError, SystemExit):
         break
+
