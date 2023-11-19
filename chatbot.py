@@ -40,7 +40,8 @@ while True:
     try:
         user_input = input("> ")
         if user_input == "history":
-            print(conversation.memory.chat_memory)
+            for m in conversation.memory.chat_memory.messages:
+                print(m.content)
             continue
 
         print("Processing...")
@@ -50,5 +51,6 @@ while True:
 
     # Press ctrl-c or ctrl-d on the keyboard to exit
     except (KeyboardInterrupt, EOFError, SystemExit):
-        break
+            break
+
 
