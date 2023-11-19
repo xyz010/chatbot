@@ -9,7 +9,7 @@ This is a chatbot designed to make an inexperienced door-to-door salesman into a
 ## System Requirements
 1. Developed and tested in Python `3.9.7`. Also compatible with newer versions.
 1. Requires an OpenAI API key as an env variable. 
-    > `export OPENAPI_API_KEY=<your_key_here>`
+    > `export OPENAI_API_KEY=<your_key_here>`
 
 
 ## Installation
