@@ -13,12 +13,13 @@ llm = ChatOpenAI(max_tokens=150, temperature=0.9)
 
 # Prompt
 field_of_work = input("Please enter your field of work: ")
+experience = input("Please enter your years of experience: ")
+
+system_message = f"You are a door-to-door salesperson expert in {field_of_work}. You are teaching someone with {experience} years of experience how to be an effective door-to-door salesperson."
+
 prompt = ChatPromptTemplate(
     messages=[
-        SystemMessagePromptTemplate.from_template(
-            f"You are a door-to-door salesperson expert in {field_of_work}. You are teaching a new recruit how to sell."
-        ),
-        # The `variable_name` here is what must align with memory
+        SystemMessagePromptTemplate.from_template(system_message),
         MessagesPlaceholder(variable_name="chat_history"),
         HumanMessagePromptTemplate.from_template("{question}"),
     ]
