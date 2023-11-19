@@ -1,5 +1,5 @@
 # SalesmanBot
-This is a chatbot designed to make an inexperienced door-to-door salesman to an expert-level salesperson. User can insert their field of work (e.g. plumbing, heating and cooling) and their years of experience (e.g. 3) and get personalized feedback.
+This is a chatbot designed to make an inexperienced door-to-door salesman into an expert-level salesperson. User can insert their field of work (e.g. plumbing, heating and cooling) and their years of experience (e.g. 3) and get personalized feedback.
 
 ## Project Requirements
 
