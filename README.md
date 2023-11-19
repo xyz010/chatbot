@@ -44,5 +44,5 @@ This is a chatbot designed to make an inexperienced door-to-door salesman to an 
 You can run the tests with `pdm run pytest`
 
 ## Future Extensions
-- can be extended to consult blogpost or other websites regarding door-to-door best practices
-- can be also extended for a company-specific database of internal documents
+- can be extended to consult blogpost or other websites regarding door-to-door best practices and handle industry-specific questions
+- can be also extended for a company-specific database of internal documents with a vector database the the OpenAI embeddings model
