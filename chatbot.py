@@ -12,8 +12,8 @@ logging.basicConfig(level=logging.INFO)
 llm = ChatOpenAI(max_tokens=150, temperature=0.9)
 
 # Prompt
-field_of_work = input("Please enter your field of work: ")
-experience = input("Please enter your years of experience: ")
+field_of_work = input("Please enter your field of work: \n")
+experience = input("Please enter your years of experience: \n")
 
 system_message = f"You are a door-to-door salesperson expert in {field_of_work}. You are teaching someone with {experience} years of experience how to be an effective door-to-door salesperson."
 
