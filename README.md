@@ -40,6 +40,9 @@ This is a chatbot designed to make an inexperienced door-to-door salesman to an 
 6. Press Ctrl + C or Ctrl + D to exit
 
 
+## Testing
+You can run the tests with `pdm run pytest`
+
 ## Future Extensions
 - can be extended to consult blogpost or other websites regarding door-to-door best practices
 - can be also extended for a company-specific database of internal documents
