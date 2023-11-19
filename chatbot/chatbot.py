@@ -7,7 +7,7 @@ from langchain.prompts import (ChatPromptTemplate, HumanMessagePromptTemplate,
                                MessagesPlaceholder,
                                SystemMessagePromptTemplate)
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.ERROR)
 # LLM
 llm = ChatOpenAI(max_tokens=150, temperature=0.9)
 
