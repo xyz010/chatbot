@@ -9,7 +9,7 @@ from langchain.prompts import (ChatPromptTemplate, HumanMessagePromptTemplate,
 
 logging.basicConfig(level=logging.ERROR)
 # LLM
-llm = ChatOpenAI(max_tokens=150, temperature=0.9)
+llm = ChatOpenAI(max_tokens=200, temperature=0.9)
 
 # Prompt
 field_of_work = input("Please enter your field of work: \n")

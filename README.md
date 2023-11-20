@@ -43,6 +43,9 @@ This is a chatbot designed to make an inexperienced door-to-door salesman into a
 ## Testing
 You can run the tests with `pdm run pytest`
 
+## Notes
+- I have set the maximum tokens at 200 which correspond to approximately 150 words
+- There is no known streaming capability for the LLMChain, the generation has to be completed in order to display it to the user
 ## Future Extensions
 - can be extended to consult blogpost or other websites regarding door-to-door best practices and handle industry-specific questions
 - can be also extended for a company-specific database of internal documents with a vector database the the OpenAI embeddings model
